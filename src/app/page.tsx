@@ -1,4 +1,6 @@
 import Banner from "@/components/Banner";
+import CallToAction from "@/components/CallToAction";
+import FAQ from "@/components/FAQ";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import LogoTicker from "@/components/LogoTicker";
@@ -15,6 +17,8 @@ export default function Home() {
       <LogoTicker />
       <Features />
       <ProductShowcase />
+      <FAQ />
+      <CallToAction />
     </>
   );
 }

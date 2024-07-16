@@ -4,7 +4,8 @@ import MenuIcon from "../assets/icons/menu.svg";
 
 function Navbar() {
   return (
-    <div className="bg-black">
+    // before:bg-[linear-gradient(to_bottom,#000_30%,rgba(0,0,0,0))]
+    <div className="bg-black before:content-[''] before:h-10 before:w-full before:absolute before:-bottom-12 relative">
       <div className="px-4">
         <div className="flex items-center justify-between py-4 py-">
           <div className="relative">

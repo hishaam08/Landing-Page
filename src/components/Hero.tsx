@@ -1,11 +1,14 @@
+"use client";
+
 import Arrow from "@/assets/icons/arrow.svg";
 import messageImage from "@/assets/message.png";
 import cursorImage from "@/assets/cursor.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function Hero() {
   return (
-    <div className="text-white bg-[linear-gradient(to_bottom,#000,#200D42_34%,#4F21A1_65%,#A46EDB_82%)] py-[74px] sm:py-24 relative overflow-clip">
+    <div className="text-white bg-[linear-gradient(to_bottom,#000,#200D42_34%,#4F21A1_65%,#A46EDB_82%)] py-[74px] sm:py-24 relative overflow-hidden">
       <div className="absolute h-[375px] bg-black w-[750px] sm:w-[1924px] sm:h-[768px] lg:w-[3000px] lg:h-[1200px] rounded-[100%] left-1/2 -translate-x-1/2 border border-[#B48CDE] bg-[radial-gradient(closest-side,#000_82%,#9560EB)] top-[calc(100%-96px)] sm:top-[calc(100%-120px)]"></div>
       <div className="container relative">
         <div className="flex items-center justify-center">
@@ -28,20 +31,32 @@ function Hero() {
               <br />
               at a Time
             </h1>
-            <Image
-              className="absolute hidden sm:inline top-[56px] left-[498px]"
-              height={200}
-              width={200}
-              src={messageImage}
-              alt="message image"
-            />
-            <Image
-              height={200}
-              width={200}
+            <motion.div
+              drag
+              className="absolute hidden h-[200px] w-[200px] sm:inline top-[56px] left-[498px]"
+            >
+              <Image
+                // className="max-w-none"
+                // height={200}
+                // width={200}
+                src={messageImage}
+                alt="message image"
+                draggable="false"
+              />
+            </motion.div>
+            <motion.div
+              drag
               className="absolute hidden sm:inline right-[476px] top-[108px]"
-              src={cursorImage}
-              alt="cursor image"
-            />
+            >
+              <Image
+                // height={200}
+                // width={200}
+                className="max-w-none"
+                src={cursorImage}
+                alt="cursor image"
+                draggable="false"
+              />
+            </motion.div>
           </div>
         </div>
         <div className="flex justify-center">
